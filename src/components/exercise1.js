@@ -25,7 +25,6 @@ class Exercise extends React.Component {
             <div>
                 <h1>Ejercicio 1</h1>
                <div>
-                   <p>Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12 caracteres</p>
                    <Percentage value={data} />
                </div>
             </div>

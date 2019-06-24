@@ -10,6 +10,8 @@ import {
     CardSubtitle,
     Spinner
 } from 'reactstrap';
+
+import Cards from './cards';
 import { URL } from '../utils/url';
 
 class Exercise2 extends React.Component {
@@ -67,23 +69,7 @@ class Exercise2 extends React.Component {
                 </div>
                 { spinner ?
                     <Spinner style={{width: '3rem', height: '3rem'}}/> :
-                    <Row>
-                        { data !== null ? data.map((value, index) => {
-                            return (
-                                <Col sm="4" key={index}>
-                                    <div>
-                                        <Card>
-                                            <CardImg top width="100%" src={value.avatar} alt="Card image cap" />
-                                            <CardBody>
-                                                <CardTitle>Name: {value.first_name} {value.last_name}</CardTitle>
-                                                <CardSubtitle>Email: {value.email}</CardSubtitle>
-                                            </CardBody>
-                                        </Card>
-                                    </div>
-                                </Col>
-                            );
-                        }) : ''}
-                    </Row>
+                    <Cards value={data}/>
                 }
 
             </div>

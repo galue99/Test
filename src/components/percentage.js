@@ -16,6 +16,7 @@ const Percentage = ({ value }) => {
 
     return (
         <div>
+            <p>Obtener el porcentaje de personas cuyo nombre y apellido tienen mas de 12 caracteres</p>
             <p>{ persons/personsLength !== 0 ?
                 ((persons/personsLength)*100) <= 50 ?
                     <Badge color={'warning'}>{((persons/personsLength)*100)}%</Badge>

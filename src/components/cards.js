@@ -7,8 +7,7 @@ import {
     CardImg,
     CardBody,
     CardTitle,
-    CardSubtitle,
-    Spinner
+    CardSubtitle
 } from 'reactstrap';
 
 const Cards = ({ value }) => {
@@ -36,7 +35,7 @@ const Cards = ({ value }) => {
 };
 
 Cards.propTypes = {
-    value: PropTypes.array.isRequired,
+    value: PropTypes.array,
 };
 
 export default Cards;

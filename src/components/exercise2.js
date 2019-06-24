@@ -1,16 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-    Row,
-    Col,
-    Card,
-    CardImg,
-    CardBody,
-    CardTitle,
-    CardSubtitle,
-    Spinner
-} from 'reactstrap';
-
+import { Spinner } from 'reactstrap';
 import Cards from './cards';
 import { URL } from '../utils/url';
 
@@ -39,11 +29,11 @@ class Exercise2 extends React.Component {
         this.setState({
             spinner: true
         });
+
         fetch(`${URL}?page=${this.state.number}`)
             .then(response => response.json())
             .then(res => this.setState({ data: res.data, spinner: false }));
     }
-
 
     render(){
         const { data, spinner } = this.state;
@@ -71,7 +61,6 @@ class Exercise2 extends React.Component {
                     <Spinner style={{width: '3rem', height: '3rem'}}/> :
                     <Cards value={data}/>
                 }
-
             </div>
         );
     }
